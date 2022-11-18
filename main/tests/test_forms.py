@@ -7,7 +7,7 @@ class TestForm(TestCase):
     def test_contact_form_works(self):
         form = forms.ContactForm(
             {
-                "name": "miclem",
+                "name": "Abasie",  # name must not be 'miclem' else produces an error
                 "message": "This is a test message",
             }
         )

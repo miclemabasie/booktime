@@ -12,7 +12,6 @@ class ContactForm(forms.Form):
 
     def clean_name(self):
         name = self.cleaned_data["name"]
-        print(f"#################{name}")
         if name == "miclem":
             raise forms.ValidationError("The name can not set to miclem.")
         return name

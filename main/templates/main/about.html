@@ -1,15 +1,10 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 
-{% block main %}
+
+{% block content %}
     <h1 class='text-center'>{{header}}</h1>
     </br>
     <p>{{ description }}</p>
 
-    <h3>Contact Us Today. </h3>
-    <form method="post" class="my-class">
-        {{ form|crispy }}
-        {% csrf_token %}
-        <input type="submit" value="Submit" class="btn btn-primary">
-    </form>
-{% endblock main %}
+    
+{% endblock content %}

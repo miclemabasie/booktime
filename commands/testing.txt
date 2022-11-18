@@ -1,0 +1,17 @@
+Run all the views tests
+
+$ ./manage.py test main.test.test_views.TestPage
+
+Run the homepage test
+
+$ ./manage.py test main.test.test_views.TestPage.test_home_page_works
+
+Run all tests
+
+$ ./manage.py test
+
+Discover all that needs to be tested
+
+$ coverage run manage.py test
+
+$ coverage html

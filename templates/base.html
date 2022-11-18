@@ -1,34 +1,31 @@
-{% load static %}
+<!-- DOCTYPE -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title> BookTime</title>
-
-    <!-- Bootstrap -->
-    <link href={% static "bootstrap/css/bootstrap.css" %} rel="stylesheet">
-   
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
+    <title>BookTime</title>
+    <meta charset="utf-8" />
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
   </head>
   <body>
-  {% include "./snipets/navigation.html" %}
-  <div class="container">
-    {% block main %}
-    
-    {% endblock main %}
-  </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
+    {% include "./snipets/navigation.html" %}
+
+    <!-- YOUR CONTENT GOES HERE -->
+    <div class="container">
+      {% block content %}
+
+      {% endblock content %}
+    </div>
+
+    <!-- JavaScript: placed at the end of the document so the pages load faster -->
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
